@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+svg {
+	  font: 10px sans-serif;
+}
+
+.line {
+	  fill: none;
+	  stroke: #000;
+	  stroke-width: 1.5px;
+}
+
+.axis path,
+.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+}
