@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pi-Drive | Report</title>
+    <link rel='stylesheet' href='../../stylesheets/style.css' />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.css">
+  </head>
+  <body>
+    <h4>Pi-Drive - Report</h4>
+    <p>
+      Your car is failing and needs immediate attention.
+    </p>
+    <%= data %>
+    <br>
+    <%= locals.data %>
+    <br>
+    <div id="stats">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th>Lower Bound |</th>
+          <th>Current Value - at failing point</th>
+          <th>| Upper Bound</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <% if(data.vss) %>
+              <p>
+                0
+              </p>
+              <% if(data.rpm) %>
+              <p>
+                600
+              </p>
+              <% if(data.temp) %>
+              <p>
+                0
+              </p>
+              <% if(data.load_pct) %>
+              <p>
+                0
+              </p>
+            </td>
+            <td style="color:red">
+              <%= locals.data %>
+<!--               <% if(locals.data.rpm) %>
+                <%= locals.data.rpm %>
+              <% if(locals.data.temp) %>
+                <%= locals.data.temp %>
+              <% if(locals.data.load_pct) %>
+                <%= locals.data.load_pct %> -->
+            </td>
+            <td>
+              <% if(data.vss) %>
+              <p>
+                220
+              </p>
+              <% if(data.rpm) %>
+              <p>
+                2200
+              </p>
+              <% if(data.temp) %>
+              <p>
+                140
+              </p>
+              <% if(data.load_pct) %>
+              <p>
+                100
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

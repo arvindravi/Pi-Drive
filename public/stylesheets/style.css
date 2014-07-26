@@ -23,3 +23,15 @@ svg {
 	  stroke: #000;
 	  shape-rendering: crispEdges;
 }
+
+#graph {
+  margin-left: 150px;
+}
+
+#cv {
+  color: blue;
+}
+
+#notice p {
+  color: red;
+}
